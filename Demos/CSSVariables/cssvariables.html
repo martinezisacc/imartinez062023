@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+
+    <style>
+
+        :root
+        {
+            --default-canvas-color: rgb(93, 148, 111);
+            --circle-fill-in: red;
+        }
+        *
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #canvas
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Creat and design canvas variable
+        const canvas = window.document.querySelector('#canvas')
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas color
+        // canvas.style.backgroundColor = 'lightblue';
+        canvas.style.backgroundColor = getComputedStyle(canvas).getPropertyValue('--default-canvas-color');
+
+        // Set default canvas
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Handle resizing of browser window
+        window.addEventListener('resize', function()
+        {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Draw circle
+        ctx.fillStyle = getComputedStyle(canvas).getPropertyValue('--circle-fill-in');
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 10;
+        ctx.arc(100, 100, 90, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+    </script>
+
+</body>
+
+</html>
