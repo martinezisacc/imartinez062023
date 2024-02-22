@@ -132,6 +132,7 @@
             {
                 ctx.beginPath();
                 ctx.fillStyle =brushColor
+                ctx.lineJoin = 'round';
                 ctx.arc(mouse.x, mouse.y, brushSize, 0, Math.PI *2);
                 ctx.fill();
             }

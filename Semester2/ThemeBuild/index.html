@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Build For Astro</title>
+<style>
+:root
+{
+--color-primary:red;
+--color-secondary:blue;
+}
+html
+{
+font-size:62.5%;
+/* Allows you to use rems instead of pixels for sizing */
+/*
+.5rem = 5px
+1.0rem = 10px
+1.6rem = 16px
+2.0rem = 20px
+6.0rem = 60px
+*/
+}
+/* Browser Reset */
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Easy pixel calculations with Rem Units */
+body
+{
+font-size:1.6rem;
+}
+/* Fix browser bounce on Macs */
+body
+{
+    overflow: auto;
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+/* General Mobile First CSS */
+
+.container
+{
+    background-color: white;
+    min-height: 10.0rem;
+    max-width: 120.0rem;
+    margin: auto;
+    padding: 0rem 3rem 0rem 3rem;
+}
+
+#pageheader
+{
+    min-height: 200px;
+    background-color: coral;
+    pad: 1rem;
+}
+#showcase
+{
+    min-height: 200px;
+    background-color: lightblue;
+    pad: 1rem;
+}
+#features
+{
+    min-height: 200px;
+    background-color: aquamarine;
+    pad: 1rem;
+}
+#pagecontent
+{
+    min-height: 200px;
+    background-color: lightgreen;
+    pad: 1rem;
+}
+#semesters
+{
+    min-height: 200px;
+    background-color: limegreen;
+    pad: 1rem;
+}
+#pagefooter
+{
+    min-height: 200px;
+    background-color: lavender;
+    pad: 1rem;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width:320px)
+{
+body
+{
+font-size: 1rem;
+}
+#features
+{
+background-color: magenta;
+}
+}
+@media only screen and (min-width:480px)
+{
+body
+{
+font-size: 1.4rem;
+}
+#features
+{
+background-color: yellow;
+}
+}
+@media only screen and (min-width:768px)
+{
+body
+{
+font-size: 1.6rem;
+}
+#features
+{
+background-color: lime;
+}
+}
+@media only screen and (min-width:1024px)
+{
+#features
+{
+background-color: coral;
+}
+}
+@media only screen and (min-width:1200px)
+{
+body
+{
+font-size: 2rem;
+}
+#features
+{
+background-color: steelblue;
+}
+}
+</style>
+
+</head>
+
+
+<body>
+
+    <!-- 
+        pageheader
+        showcase
+        features
+        pagecontent
+        pagefooter
+     -->
+
+    <!-- Begin Pageheader -->
+    <header id="pageheader">
+
+        pageheader
+
+        <div class="container">
+        
+        </div>
+        <!-- End Container -->
+
+    </header>
+
+    <!-- End Pageheader -->
+
+
+
+    <!-- Begin Showcase -->
+    <section id="showcase">
+
+        showcase
+    
+    </section>
+    <!-- End Showcase -->
+
+
+
+    <!-- Begin Features -->
+    <section id="features">
+
+        features
+
+        <div class="container">
+        
+        </div>
+        <!-- End Container -->
+
+    </section>
+
+    <!-- End Features -->
+
+
+
+    <!-- Begin Pagecontent -->
+    <main id="pagecontent">
+
+        pagecontent
+
+        <div class="container">
+        
+        </div>
+        <!-- End Container -->
+
+    </main>
+    <!-- End Pagecontent -->
+
+
+
+    <!-- Begin Semesters -->
+    <section id="semesters">
+
+        semesters
+
+        <div class="container">
+        
+        </div>
+        <!-- End Container -->
+
+    </section>
+    <!-- End Semesters -->
+
+
+
+    <!-- Begin Pagefooter -->
+    <footer id="pagefooter">
+
+        pagefooter
+
+        <div class="container">
+        
+        </div>
+        <!-- End Container -->
+
+    </footer>
+    <!-- End Pagefooter -->
+
+
+</body>
+
+</html>
